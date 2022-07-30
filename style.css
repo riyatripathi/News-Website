@@ -1,0 +1,21 @@
+.header{
+	padding:25px;
+	color:#fff;
+	font-size: 35px;
+	position: fixed;
+	width: 100%;
+}
+
+.filt{
+	filter: drop-shadow(8px 8px 10px gray);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
