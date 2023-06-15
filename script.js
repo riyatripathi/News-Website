@@ -1,4 +1,5 @@
-baseURL = 'https://news-api-call.herokuapp.com/news/'
+// baseURL = 'https://news-api-call.herokuapp.com/news/'
+baseURL = 'https://script.google.com/macros/s/AKfycbzfsc2INqYxIUbHTyyDOGLtFflVifCRQDRzr2eINgIiyQnCovRr8qRbpjOUdLZdsUlB/exec?endpoint=news'
 let news = document.getElementById('news');
 let mainImg = document.getElementById('mainImg');
 let maini = document.getElementById('maini');
@@ -17,7 +18,7 @@ body();
 async function body(){
 	let data = await fetch(baseURL);
 	data = await data.json();
-	data = JSON.parse(data);
+	// data = JSON.parse(data);
 	if(data.status == "ok"){
  		let html = ``;
  		let html2 = mainImg.innerHTML;
@@ -99,10 +100,11 @@ async function searchkro(){
 	content.style.display="none";
 	spinner.style.display = 'block';
 	news.innerHTML = '';
-	let baseURL2 = `https://news-api-local.herokuapp.com/news/search/${query}`;
+	// let baseURL2 = `https://news-api-local.herokuapp.com/news/search/${query}`;
+	let baseURL2 = `https://script.google.com/macros/s/AKfycbzfsc2INqYxIUbHTyyDOGLtFflVifCRQDRzr2eINgIiyQnCovRr8qRbpjOUdLZdsUlB/exec?endpoint=search&query=${query}`; 
     let data = await fetch(baseURL2);
 	data = await data.json();
-	data = JSON.parse(data);
+	// data = JSON.parse(data);
  	if(data.status == "ok"){
  		let html = ``;
  		mainImg.innerHTML = '';
